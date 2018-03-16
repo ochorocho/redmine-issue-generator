@@ -6,73 +6,83 @@ Class IssueGenerator
 {
 
     /**
+     * Issues to create
+     *
      * @var int
      */
     protected $issueCount = 2;
 
     /**
-     * @var string
+     * Set redmine url
+     *
+     * @var string $url
      */
-    protected $url = "root";
+    protected $url = "http://redmine.example.org";
 
     /**
-     * @var string
+     * @var string $token
      */
     protected $token = "";
 
     /**
-     * @var array
+     * @var array $users
      */
     protected $users = ["admin"];
 
     /**
-     * @var array
+     * @var array $projects
      */
     protected $projects = [];
 
     /**
-     * @var string
+     * @var string $subject
      */
     protected $subject = "";
 
     /**
-     * @var string
+     * @var string $text
      */
     protected $text = "";
 
     /**
-     * Range for Billing Hours
-     * @var array [minValue,maxValue]
+     * Range for Billing Hours [minValue,maxValue]
+     *
+     * @var array $billingHoursRange
      */
     protected  $billingHoursRange = [0,60];
 
     /**
-     * Description length
-     * @var array [minValue,maxValue]
+     * Description length [minValue,maxValue]
+     *
+     * @var array $textLengthRange
      */
     protected $textLengthRange = [64,240];
 
     /**
-     * Subject length
-     * @var array [minValue,maxValue]
+     * Subject length [minValue,maxValue]
+     *
+     * @var array $subjectLengthRange
      */
     protected $subjectLengthRange = [];
 
     /**
      * Period of das in which is used to create the random date within
      * Range is $today + $randomDateDays
-     * @var int
+     *
+     * @var int $randomDateDays
      */
     protected $randomDateDays = 364;
     /**
      * $randomDate - $dateLowRange
-     * @var array
+     *
+     * @var array $dateLowRange
      */
     protected $dateLowRange = [1,5];
 
     /**
      * $randomDate + $dateHighRange
-     * @var array
+     *
+     * @var array $dateHighRange
      */
     protected $dateHighRange = [1,5];
 
@@ -213,9 +223,9 @@ Class IssueGenerator
     }
 
     /**
-     * @param array $textLengthRange
+     * @param $textLengthRange
      */
-    public function setTextLengthRange($descriptionLengthRange)
+    public function setTextLengthRange($textLengthRange)
     {
         $this->textLengthRange = $textLengthRange;
     }
