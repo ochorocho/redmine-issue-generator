@@ -7,7 +7,9 @@ plugin testing and this was the result ...
 Good to know
 ============
 
-* Get API Token `http://redmine.example.org/my/account` in the right panel click on show
+* Run it using `vendor/bin/redmineIssueGenerator` (first parameter is used to specify config file path)
+* By default script looks for a config file `redmine.config.php` in current folder. 
+* Get API Token is found on `http://redmine.example.org/my/account` in the right panel click on show
 * Currently only issues are created. This does not create Journals and such ...
 * Based on [kbsali/redmine-api](https://packagist.org/packages/kbsali/redmine-api)
 
