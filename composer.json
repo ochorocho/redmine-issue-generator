@@ -1,0 +1,16 @@
+{
+    "name": "joro/redmine-issue-generator",
+    "description": "Generate random Redmine issues",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "kbsali/redmine-api": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Redmine\\": "Redmine/"
+        }
+    },
+    "bin": [
+        "redmineIssueGenerator"
+    ]
+}

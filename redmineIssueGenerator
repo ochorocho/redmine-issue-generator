@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
+    if (file_exists($file)) {
+        /** @noinspection PhpIncludeInspection */
+        require $file;
+        break;
+    }
+}
+
+use Redmine\IssueGenerator;
+
+$generator = new IssueGenerator();
+
+$config = "./redmine.config.php";
+
+if($argv[1]) {
+    $config = $argv[1];
+}
+
+if(is_file($config)) {
+    $file = realpath($config);
+    echo "\033[32mCreating issues using config:".PHP_EOL." $file\033[0m" . PHP_EOL;
+    include_once($config);
+} else {
+    exit("\033[31mConfig file $config does not exist ...\033[0m" . PHP_EOL);
+}
