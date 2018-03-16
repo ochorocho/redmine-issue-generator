@@ -7,7 +7,7 @@ plugin testing and this was the result ...
 Minimum config
 ==============
 
-''php
+```php
 // Init Class
 $generate = new Redmine\IssueGenerator();
 
@@ -23,13 +23,12 @@ $generate->setUsers(["admin","guest"]);
 
 // Run it
 $generate->createIssues();
-
-''
+```
 
 Advanced config
 ===============
 
-''php
+```php
 // Init Class
 $generate = new Redmine\IssueGenerator();
 
@@ -64,4 +63,4 @@ $generate->setDateHighRange([3,10]);
 
 // Run it
 $generate->createIssues();
-''
+```
