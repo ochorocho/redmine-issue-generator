@@ -6,8 +6,10 @@ plugin testing and this was the result ...
 
 Good to know
 ============
+
 * Get API Token `http://redmine.example.org/my/account` in the right panel click on show
 * Currently only issues are created. This does not create Journals and such ...
+* Based on [kbsali/redmine-api](https://packagist.org/packages/kbsali/redmine-api)
 
 Minimum config
 ==============
