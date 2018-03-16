@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['why_20_3f',['Why ?',['../index.html',1,'']]]
+  ['what_20and_20why',['What and why',['../index.html',1,'']]]
 ];

@@ -1,8 +1,13 @@
-Why ?
-=====
+What and why
+============
 
 Well, i tend to be a lazy and needed a lot of random issues created for
 plugin testing and this was the result ...
+
+Good to know
+============
+* Get API Token `http://redmine.example.org/my/account` in the right panel click on show
+* Currently only issues are created. This does not create Journals and such ...
 
 Minimum config
 ==============

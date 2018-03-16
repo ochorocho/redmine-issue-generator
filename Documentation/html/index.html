@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Redmine Issue Generator: Why ?</title>
+<title>Redmine Issue Generator: What and why</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,10 +62,15 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Why ? </div>  </div>
+<div class="title">What and why </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Well, i tend to be a lazy and needed a lot of random issues created for plugin testing and this was the result ...</p>
+<h1>Good to know </h1>
+<ul>
+<li>Get API Token <code><a href="http://redmine.example.org/my/account">http://redmine.example.org/my/account</a></code> in the right panel click on show</li>
+<li>Currently only issues are created. This does not create Journals and such ...</li>
+</ul>
 <h1>Minimum config </h1>
 <div class="fragment"><div class="line"><span class="comment">// Init Class</span></div><div class="line">$generate = <span class="keyword">new</span> <a class="code" href="namespace_redmine.html#ab0fb626e08a4e2863ce0701d1539b043">Redmine\IssueGenerator</a>();</div><div class="line"></div><div class="line"><span class="comment">// Account details</span></div><div class="line">$generate-&gt;setUrl(<span class="stringliteral">&#39;http://redmine.example.org&#39;</span>);</div><div class="line">$generate-&gt;setToken(<span class="stringliteral">&quot;REDMINE_API_TOKEN&quot;</span>);</div><div class="line"></div><div class="line"><span class="comment">// Create issues for these projects</span></div><div class="line">$generate-&gt;setProjects([<span class="stringliteral">&quot;project1&quot;</span>,<span class="stringliteral">&quot;project2&quot;</span>]);</div><div class="line"></div><div class="line"><span class="comment">// Create issues for these users</span></div><div class="line">$generate-&gt;setUsers([<span class="stringliteral">&quot;admin&quot;</span>,<span class="stringliteral">&quot;guest&quot;</span>]);</div><div class="line"></div><div class="line"><span class="comment">// Run it</span></div><div class="line">$generate-&gt;createIssues();</div></div><!-- fragment --><h1>Advanced config </h1>
 <div class="fragment"><div class="line"><span class="comment">// Init Class</span></div><div class="line">$generate = <span class="keyword">new</span> <a class="code" href="namespace_redmine.html#ab0fb626e08a4e2863ce0701d1539b043">Redmine\IssueGenerator</a>();</div><div class="line"></div><div class="line"><span class="comment">// Account details</span></div><div class="line">$generate-&gt;setUrl(<span class="stringliteral">&#39;http://redmine.example.org&#39;</span>);</div><div class="line">$generate-&gt;setToken(<span class="stringliteral">&quot;REDMINE_API_TOKEN&quot;</span>);</div><div class="line"></div><div class="line"><span class="comment">// Create issues for these projects</span></div><div class="line">$generate-&gt;setProjects([<span class="stringliteral">&quot;project1&quot;</span>,<span class="stringliteral">&quot;project2&quot;</span>]);</div><div class="line"></div><div class="line"><span class="comment">// Create issues for these users</span></div><div class="line">$generate-&gt;setUsers([<span class="stringliteral">&quot;admin&quot;</span>,<span class="stringliteral">&quot;guest&quot;</span>]);</div><div class="line"></div><div class="line"><span class="comment">// Issues to create: Project * Users * IssueCount</span></div><div class="line">$generate-&gt;setIssueCount(2);</div><div class="line"></div><div class="line"><span class="comment">// Set text (if npt set baconipsum is used)</span></div><div class="line">$generate-&gt;setSubject(<span class="stringliteral">&quot;I&#39;m a subject with random length&quot;</span>);</div><div class="line">$generate-&gt;setText(<span class="stringliteral">&quot;I&#39;m a nice descriton with a random length&quot;</span>);</div><div class="line"></div><div class="line"><span class="comment">// Set description length range</span></div><div class="line">$generate-&gt;setSubjectLengthRange([256,512]);</div><div class="line"></div><div class="line"><span class="comment">// Set description length range</span></div><div class="line">$generate-&gt;setTextLengthRange([256,512]);</div><div class="line"></div><div class="line"><span class="comment">// Set random number range in days to subtract from custom date: [min,max]</span></div><div class="line">$generate-&gt;setDateLowhRange([3,10]);</div><div class="line"></div><div class="line"><span class="comment">// Set random number range in days to add to custom date: [min,max]</span></div><div class="line">$generate-&gt;setDateHighRange([3,10]);</div><div class="line"></div><div class="line"><span class="comment">// Run it</span></div><div class="line">$generate-&gt;createIssues();</div></div><!-- fragment --> </div></div><!-- contents -->
